@@ -4,6 +4,7 @@ const cors = require('cors');
 const authRoutes = require('./routes/authRoutes.js');
 const pesanRoutes = require('./routes/messageRoutes.js');
 app.use(express.json());
+// tes
 app.use(
   cors({
     origin: ['http://192.168.100.230:3000', 'http://localhost:3000', 'https://www.kafkaaaa.my.id', 'https://kafkaaaa.my.id', 'https://portofolio-puce-delta.vercel.app'],

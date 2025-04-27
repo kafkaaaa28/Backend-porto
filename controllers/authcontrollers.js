@@ -3,6 +3,7 @@ const Admin = require('../models/admin.js');
 const bcrypt = require('bcryptjs');
 
 const Authcontrollers = {
+  // login
   login: async (req, res) => {
     try {
       const { email, password } = req.body;
