@@ -13,6 +13,7 @@ const corsOptions = {
 
 // 🔥 Middleware untuk semua request
 app.use(cors(corsOptions));
+
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/pesan', pesanRoutes);
