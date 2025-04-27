@@ -10,6 +10,7 @@ const Authcontrollers = {
       if (!admin) {
         return res.status(400).json({ msg: 'email salah' });
       }
+
       const isMatch = await bcrypt.compare(password, admin.password);
       if (!isMatch) return res.status(400).json({ msg: 'password salah' });
       const token = jwt.sign({ id: admin.id, email: admin.email }, process.env.JWT_SECRET, { expiresIn: '1h' });
