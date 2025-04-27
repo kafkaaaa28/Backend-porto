@@ -26,9 +26,9 @@ const Authcontrollers = {
         return res.status(404).json({ msg: 'admin tidak ditemukan' });
       }
       res.json({ id: admin.id, email: admin.email });
-    } catch (error) {
-      console.error('❌ Error getMe:', err.message);
-      res.status(500).json({ message: err.message });
+    } catch (err) {
+      console.error('❌ Error getMe:', err);
+      res.status(500).json({ message: 'Internal Server Error' });
     }
   },
   logout: async (req, res) => {
