@@ -14,3 +14,18 @@ const pool = mysql.createPool({
 });
 
 module.exports = pool;
+// const mysql = require('mysql2/promise');
+
+// const pool = mysql.createPool({
+//   host: '127.0.0.1', // hindari localhost (IPv6 issue)
+//   user: 'root', // sesuaikan user MySQL kamu
+//   password: '', // sesuaikan password
+//   database: 'portokafka',
+//   port: 3306,
+//   waitForConnections: true,
+//   connectionLimit: 10,
+//   queueLimit: 0,
+//   ssl: false, // MATIKAN SSL sepenuhnya
+// });
+
+// module.exports = pool;
