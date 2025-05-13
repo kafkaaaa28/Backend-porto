@@ -12,6 +12,16 @@ const pool = mysql.createPool({
   queueLimit: 0,
   ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : null,
 });
+async function testConnection() {
+  try {
+    const connection = await pool.getConnection();
+    console.log('✅ Koneksi ke database berhasil!');
+    connection.release(); // pastikan connection dikembalikan ke pool
+  } catch (err) {
+    console.error('❌ Gagal koneksi ke database:', err.message);
+  }
+}
+testConnection();
 
 module.exports = pool;
 // const mysql = require('mysql2/promise');
