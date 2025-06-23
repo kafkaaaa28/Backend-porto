@@ -12,9 +12,7 @@ const corsOptions = {
   credentials: true,
 };
 
-// 🔥 Middleware untuk semua request
 app.use(cors(corsOptions));
-const bcrypt = require('bcryptjs');
 
 // Routes
 app.use('/api/coment', comentRoutes);
