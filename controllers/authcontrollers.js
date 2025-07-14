@@ -32,13 +32,5 @@ const Authcontrollers = {
       res.status(500).json({ message: 'Internal Server Error' });
     }
   },
-  logout: async (req, res) => {
-    try {
-      res.status(200).json({ message: 'Logout success' });
-    } catch (err) {
-      console.error('❌ Logout error:', err.message);
-      res.status(500).json({ message: 'Logout failed' });
-    }
-  },
 };
 module.exports = Authcontrollers;
